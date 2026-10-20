@@ -46,7 +46,7 @@ css/
 js/
   agendamento.js    calendário, filtro e validação do modal
   confirmado.js     lê os dados do agendamento e monta o resumo
-img/                uma pasta por página
+img/                logo-pkz.png (logo oficial) e uma pasta por página
 tarefas/            orientações de cada integrante
 ```
 

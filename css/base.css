@@ -220,20 +220,30 @@ h2 {
   height: 72px;
 }
 
+/* logo oficial em img/logo-pkz.png
+   se a imagem não carregar, aparece o texto do alt */
 .logo {
+  display: inline-block;
   font-family: var(--fonte-titulo);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
   white-space: nowrap;
 }
 
-.logo span {
-  font-weight: 500;
-  font-size: 1.1rem;
-  margin-left: 6px;
-  padding-left: 10px;
-  border-left: 2px solid currentColor;
+.logo img {
+  height: 32px;
+  width: auto;
+}
+
+/* em fundo escuro o logo fica branco */
+.header .logo img,
+.footer .logo img {
+  filter: brightness(0) invert(1);
+}
+
+/* no header claro ele volta para o azul original */
+.header-claro .logo img {
+  filter: none;
 }
 
 .menu {
