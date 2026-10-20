@@ -25,7 +25,7 @@ Kaue, você e o João dividem a **página da PKZ**. Você faz a segunda metade: 
 **Importante:** você e o João usam o mesmo HTML. Para os estilos de um não bagunçarem os do outro, **toda regra do seu CSS começa pelo id de uma das suas seções**. Por exemplo: `#faq h3 { ... }`, `#depoimentos .card { ... }`.
 
 ### 1. Prévia do relatório (`#relatorio`), fundo azul-marinho (`secao-escura`)
-É **só ilustrativa**: um desenho fixo em HTML/CSS, sem dados reais e sem login.
+É **só ilustrativa**: um desenho fixo em HTML/CSS, sem dados reais e sem login. Ela precisa aparecer como exemplo para quem visita o site (ver o último item abaixo).
 - Etiqueta: **RELATÓRIO VISUAL MENSAL**
 - Título (h2): **EVOLUÇÃO EM 1 MINUTO**
 - Subtítulo: "Nada de relatório de 17 páginas. Gráficos simples, comparação com atletas da mesma idade e um recado do professor."
@@ -34,14 +34,15 @@ Kaue, você e o João dividem a **página da PKZ**. Você faz a segunda metade: 
   - **Lucas, 12 anos**, "Futebol · Relatório de setembro", selo verde "EVOLUIU EM 3 DE 3"
   - 3 barras (uma `div` com largura em %): Velocidade (20 m) ↑ +8% · Salto vertical ↑ +12% · Agilidade ↑ +5%
   - Caixa "Recado do professor": "Lucas está mais rápido na saída. Próximo mês vamos focar em mudança de direção."
+- Embaixo do card, texto pequeno: "Exemplo ilustrativo de relatório. Dados fictícios."
 
 ### 2. Cuidado e segurança (`#cuidado`), fundo branco
 - Etiqueta: **PARA VOCÊ FICAR TRANQUILO**
 - Título (h2): **CUIDADO EM CADA DETALHE**
 - 4 cards claros com uma bolinha de ícone em cima:
   - **Turmas por idade**: Atletas treinam e são comparados com quem tem a mesma idade e modalidade.
-  - **Saúde registrada**: Laudos e observações (ex.: de fisioterapeuta) ficam no perfil do atleta.
-  - **Quem busca, também acompanha**: Motorista ou babá? O responsável pode liberar um acesso só de leitura.
+  - **Saúde registrada**: Laudos e observações (ex.: de fisioterapeuta) são registrados pela equipe e considerados no plano de treino.
+  - **Contato direto com a equipe**: Ficou com alguma dúvida sobre o treino? A equipe responde você pelo WhatsApp.
   - **Reteste sem atraso**: O sistema avisa a equipe quando a reavaliação do seu filho está chegando.
 
 ### 3. Depoimentos de pais (`#depoimentos`), fundo claro (`secao-clara`)
@@ -59,7 +60,7 @@ Kaue, você e o João dividem a **página da PKZ**. Você faz a segunda metade: 
 - **A partir de que idade meu filho pode treinar?** Atendemos crianças e adolescentes, sempre avaliados dentro da própria faixa etária.
 - **Ele precisa jogar em clube?** Não. A PKZ atende quem já compete e quem quer começar a evoluir no esporte.
 - **Como recebo o relatório?** Todo mês, em formato visual, com gráficos e um comentário do professor.
-- **E se quem leva meu filho não for eu?** Você pode liberar um acesso temporário, só de leitura, para quem acompanha o treino.
+- **Como faço para agendar a avaliação?** Escolha um dia no calendário do site e deixe seu nome e telefone. A equipe confirma pelo WhatsApp.
 - Extra (se der tempo): usar `<details>` e `<summary>` para abrir e fechar cada resposta.
 
 ### 5. Chamada para agendar (`#agendar`), fundo azul vivo (`var(--gradiente-pkz)`), tudo centralizado
@@ -149,7 +150,8 @@ Commits pequenos ao longo da semana são melhores do que um commitzão no últim
 
 ## Checklist antes de abrir o PR
 
-- [ ] Prévia do relatório com o card de exemplo do Lucas (fixo, só visual)
+- [ ] Prévia do relatório com o card de exemplo do Lucas (fixo, só visual) e o aviso "Exemplo ilustrativo"
+- [ ] Nenhuma menção a acesso só de leitura nem a perfil do atleta (fora do escopo da AP2)
 - [ ] Cuidado em cada detalhe com 4 cards
 - [ ] 3 depoimentos de pais
 - [ ] Perguntas frequentes com as 4 perguntas

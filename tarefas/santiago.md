@@ -44,7 +44,7 @@ Santiago, você vai montar a **página do One to One**, o estúdio de personal t
   - **Força e hipertrofia**: Treinos de membros superiores e inferiores com progressão planejada.
   - **Performance no esporte**: Preparação específica para futevôlei, corrida, beach tennis e outros.
   - **Condicionamento e saúde**: Para quem quer mais disposição, resistência e qualidade de vida.
-  - **Retorno pós-lesão**: Treino acompanhado, com laudos do fisioterapeuta registrados no seu perfil.
+  - **Retorno pós-lesão**: Treino acompanhado, levando em conta os laudos do fisioterapeuta.
 
 ### 4. Diferenciais (`#diferenciais`), fundo azul-marinho (`secao-escura`)
 - Etiqueta: **POR QUE O ONE TO ONE**
