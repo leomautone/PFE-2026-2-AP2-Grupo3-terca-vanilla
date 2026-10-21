@@ -13,7 +13,7 @@
 - Fazer o merge na `main`. Ninguém mais faz merge.
 - Resolver conflitos, principalmente no `pkz.html`, que é dividido entre o João e o Kaue.
 - Atualizar o Scrum (`docs/scrum/07-backlog-scrum.md`, no repo React) a cada entrega.
-- Colocar o logo oficial da PKZ em `img/logo-pkz.png` (o header e o footer já apontam para esse arquivo).
+- Colocar o logo oficial da PKZ em `img/logo-pkz.png` e trocar o texto do header e do footer pelo `<img>` (o comentário no HTML mostra onde).
 - Publicar no GitHub Pages e conferir o site no ar depois de cada merge.
 
 ## Telas de referência
