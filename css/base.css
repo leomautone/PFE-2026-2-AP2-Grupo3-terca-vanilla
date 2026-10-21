@@ -101,6 +101,17 @@ select {
   color: var(--branco);
 }
 
+/* fundos em gradiente de cada marca (texto branco) */
+.secao-pkz {
+  background: var(--gradiente-pkz);
+  color: var(--branco);
+}
+
+.secao-onetoone {
+  background: var(--gradiente-onetoone);
+  color: var(--branco);
+}
+
 h1,
 h2,
 .titulo {
@@ -119,7 +130,9 @@ h2 {
   color: var(--azul-escuro);
 }
 
-.secao-escura h2 {
+.secao-escura h2,
+.secao-pkz h2,
+.secao-onetoone h2 {
   color: var(--branco);
 }
 
@@ -131,7 +144,9 @@ h2 {
   max-width: 560px;
 }
 
-.secao-escura .subtitulo {
+.secao-escura .subtitulo,
+.secao-pkz .subtitulo,
+.secao-onetoone .subtitulo {
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -146,7 +161,9 @@ h2 {
   margin-bottom: 10px;
 }
 
-.secao-escura .etiqueta {
+.secao-escura .etiqueta,
+.secao-pkz .etiqueta,
+.secao-onetoone .etiqueta {
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -165,6 +182,73 @@ h2 {
   text-transform: uppercase;
   text-align: center;
   padding: 16px;
+}
+
+/* ---------- Grades e cards (podem usar em qualquer página) ---------- */
+.grade-2,
+.grade-3,
+.grade-4 {
+  display: grid;
+  gap: 24px;
+}
+
+.grade-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grade-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grade-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* card branco com sombra leve */
+.card {
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 80, 0.06);
+}
+
+.card h3 {
+  font-size: 1rem;
+  color: var(--azul-escuro);
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+}
+
+/* etiqueta em formato de pílula (ex.: TODAS AS IDADES, FUTEVÔLEI) */
+.pilula {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--lilas);
+  color: var(--azul-marinho);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.estrelas {
+  color: #f5a623;
+  letter-spacing: 2px;
+}
+
+/* número grande (ex.: 140+, 4,9) */
+.numero,
+.card .numero {
+  font-family: var(--fonte-titulo);
+  font-size: 2.6rem;
+  font-weight: 600;
+  line-height: 1;
 }
 
 /* ---------- Botões ---------- */
@@ -270,6 +354,16 @@ h2 {
   font-weight: 600;
 }
 
+/* botão ☰ só aparece no celular */
+.menu-botao {
+  display: none;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
 /* ---------- Footer ---------- */
 .footer {
   background: var(--azul-escuro);
@@ -317,13 +411,60 @@ h2 {
 }
 
 /* ---------- Celular ---------- */
+@media (max-width: 900px) {
+  .grade-3,
+  .grade-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 800px) {
+  .header-conteudo {
+    position: relative;
+    gap: 12px;
+  }
+
+  .menu-botao {
+    display: block;
+    order: 3;
+  }
+
+  /* menu vira uma lista embaixo do header */
   .menu {
     display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--azul-escuro);
+    padding: 8px 24px 16px;
+  }
+
+  .header-claro .menu {
+    background: var(--branco);
+    border-bottom: 1px solid var(--borda);
+  }
+
+  .menu-aberto .menu {
+    display: flex;
+  }
+
+  .menu a {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(128, 128, 160, 0.2);
   }
 
   .header .botao {
     padding: 10px 16px;
+    margin-left: auto;
+  }
+
+  .grade-2,
+  .grade-3,
+  .grade-4 {
+    grid-template-columns: 1fr;
   }
 
   .secao {
@@ -336,5 +477,17 @@ h2 {
 
   .footer-final {
     flex-direction: column;
+  }
+}
+
+/* celular pequeno */
+@media (max-width: 420px) {
+  .footer-colunas {
+    grid-template-columns: 1fr;
+  }
+
+  .header .botao {
+    font-size: 0.8rem;
+    padding: 8px 12px;
   }
 }

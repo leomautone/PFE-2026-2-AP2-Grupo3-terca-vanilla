@@ -44,6 +44,7 @@ css/
   base.css          cores, fontes, reset, header, footer e botões (compartilhado)
   index.css, pkz-joao.css, pkz-kaue.css, onetoone.css, agendamento.css, confirmado.css
 js/
+  base.js           menu do celular (compartilhado, só o Leonardo edita)
   agendamento.js    calendário, filtro e validação do modal
   confirmado.js     lê os dados do agendamento e monta o resumo
 img/                logo-pkz.png (logo oficial) e uma pasta por página

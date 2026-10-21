@@ -49,7 +49,14 @@ Quatro números lado a lado (número grande em Oswald e legenda pequena):
 - **Não edite o `css/base.css`.** Ele tem as cores, as fontes, o header, o footer e os botões. Se precisar de alguma mudança nele, fala comigo.
 - **Não edite o header nem o footer** dos HTMLs.
 - **Não mexa na parte de outra pessoa**, nem para "só arrumar um detalhe". Viu algo errado? Avise no grupo.
-- Use as variáveis de cor e as classes que já estão no `base.css`: `var(--azul-marinho)`, `var(--azul-pkz)`, `.container`, `.secao`, `.secao-clara`, `.secao-escura`, `.etiqueta`, `.subtitulo`, `.foto`, `.botao .botao-claro` (sobre fundo escuro) e `.botao .botao-escuro` (sobre fundo claro).
+- Use as variáveis de cor e as classes que já estão no `base.css`, para o site todo ficar com a mesma cara:
+  - Cores: `var(--azul-marinho)`, `var(--azul-pkz)`, `var(--azul-onetoone)`, `var(--lilas)`, `var(--texto-suave)`
+  - Seções: `.container` (centraliza o conteúdo), `.secao` (espaço em cima e embaixo), `.secao-clara` (fundo cinza claro), `.secao-escura` (fundo azul-marinho), `.secao-pkz` (gradiente azul da PKZ) e `.secao-onetoone` (gradiente do One to One). Nas três escuras, o texto já fica branco.
+  - Textos: `.etiqueta` (texto pequeno em cima do título), `.subtitulo`, `.numero` (número grande, ex.: 140+)
+  - Organização: `.grade-2`, `.grade-3`, `.grade-4` (colunas que viram uma só no celular) e `.card` (caixa branca com borda e sombra)
+  - Detalhes: `.pilula` (etiqueta arredondada, ex.: FUTEVÔLEI), `.estrelas` (★★★★★ em amarelo), `.foto` (área de foto/vídeo)
+  - Botões: `.botao .botao-claro` (sobre fundo escuro) e `.botao .botao-escuro` (sobre fundo claro)
+- Se precisar mudar algo dessas classes só na sua página, sobrescreva no **seu** CSS, nunca no `base.css`.
 - Onde no protótipo tem "FOTO" ou "VÍDEO", use `<div class="foto">Foto · descrição</div>`. As fotos reais entram depois.
 - Todos os dados (números, nomes, depoimentos) são fictícios, exatamente como no protótipo.
 - Protótipo no Figma, para ver em tamanho grande: https://www.figma.com/design/CQmuVXYjxTUkLDg5CzWbk0
