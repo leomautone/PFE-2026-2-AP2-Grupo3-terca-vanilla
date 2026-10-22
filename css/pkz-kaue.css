@@ -186,3 +186,46 @@
   font-size: 0.75rem;
   color: var(--texto-suave);
 }
+
+/* ---------- Perguntas frequentes ---------- */
+#faq .faq-lista {
+  margin-top: 40px;
+  align-items: start;
+}
+
+#faq .card {
+  box-shadow: none;
+}
+
+#faq summary {
+  position: relative;
+  padding-right: 28px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--azul-escuro);
+  cursor: pointer;
+  list-style: none;
+}
+
+/* tira a setinha padrão do navegador */
+#faq summary::-webkit-details-marker {
+  display: none;
+}
+
+/* sinal de + que vira − quando abre */
+#faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: -2px;
+  font-size: 1.2rem;
+  color: var(--azul-pkz);
+}
+
+#faq details[open] summary::after {
+  content: "−";
+}
+
+#faq details p {
+  margin-top: 10px;
+}
