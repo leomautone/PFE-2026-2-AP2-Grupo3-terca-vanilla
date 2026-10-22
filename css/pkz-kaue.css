@@ -229,3 +229,14 @@
 #faq details p {
   margin-top: 10px;
 }
+
+/* ---------- Chamada para agendar ---------- */
+#agendar {
+  text-align: center;
+}
+
+#agendar .subtitulo {
+  max-width: none;
+  margin: 16px auto 28px;
+  color: rgba(255, 255, 255, 0.9);
+}
