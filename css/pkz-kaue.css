@@ -121,3 +121,26 @@
   text-align: center;
   color: rgba(255, 255, 255, 0.6);
 }
+
+/* ---------- Cuidado e segurança ---------- */
+#cuidado .cuidado-cards {
+  margin-top: 40px;
+}
+
+/* cards claros, sem borda e sem sombra */
+#cuidado .card {
+  background: var(--fundo-claro);
+  border: none;
+  box-shadow: none;
+}
+
+/* bolinha do ícone */
+#cuidado .cuidado-icone {
+  display: block;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--lilas);
+  border: 1px solid #d2d4f7;
+  margin-bottom: 16px;
+}
