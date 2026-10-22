@@ -144,3 +144,45 @@
   border: 1px solid #d2d4f7;
   margin-bottom: 16px;
 }
+
+/* ---------- Depoimentos de pais ---------- */
+#depoimentos .depoimentos-titulo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#depoimentos .card {
+  border: none;
+}
+
+#depoimentos .depoimentos-destaque {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 16px;
+  font-size: 0.75rem;
+  color: var(--texto-suave);
+}
+
+#depoimentos .depoimentos-destaque .numero {
+  font-size: 1.8rem;
+  color: var(--azul-pkz);
+}
+
+#depoimentos .card .depoimentos-texto {
+  font-size: 0.9rem;
+  color: var(--texto);
+  margin-bottom: 16px;
+}
+
+#depoimentos .card .depoimentos-autor {
+  font-size: 0.75rem;
+}
+
+#depoimentos .depoimentos-aviso {
+  margin-top: 28px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--texto-suave);
+}
