@@ -1,0 +1,220 @@
+/* PKZ — parte do João (hero, faixa de confiança, sobre nós, como funciona) */
+/* começar cada regra pelo id da seção: #hero, #confianca, #sobre, #como-funciona */
+
+#hero {
+  padding: 88px 0;
+}
+
+#hero .hero-conteudo {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 56px;
+}
+
+#hero .hero-texto h1 {
+  max-width: 560px;
+}
+
+#hero .subtitulo {
+  max-width: 560px;
+}
+
+#hero .hero-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+#hero .hero-foto {
+  min-height: 380px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.16), rgba(0, 0, 80, 0.2)), var(--azul-marinho);
+}
+
+#confianca {
+  padding: 36px 0;
+  background: var(--lilas);
+}
+
+#confianca .confianca-grade {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+#confianca .confianca-item {
+  padding: 8px 24px;
+  border-right: 1px solid rgba(0, 0, 128, 0.16);
+}
+
+#confianca .confianca-item:first-child {
+  padding-left: 0;
+}
+
+#confianca .confianca-item:last-child {
+  padding-right: 0;
+  border-right: 0;
+}
+
+#confianca .confianca-item h2 {
+  margin-bottom: 8px;
+  color: var(--azul-marinho);
+  font-family: var(--fonte-texto);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-transform: none;
+}
+
+#confianca .confianca-item p {
+  color: var(--texto-suave);
+  font-size: 0.82rem;
+}
+
+#sobre .sobre-conteudo {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 64px;
+}
+
+#sobre .sobre-foto {
+  min-height: 440px;
+}
+
+#sobre .sobre-texto h2 {
+  margin-bottom: 20px;
+}
+
+#sobre .sobre-texto > p:not(.etiqueta) {
+  margin-top: 14px;
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+}
+
+#sobre .sobre-texto blockquote {
+  margin-top: 24px;
+  padding: 20px 24px;
+  border-left: 4px solid var(--azul-pkz);
+  border-radius: 0 var(--raio) var(--raio) 0;
+  background: var(--lilas);
+  color: var(--azul-marinho);
+  font-weight: 600;
+}
+
+#sobre .sobre-texto cite {
+  display: block;
+  margin-top: 10px;
+  color: var(--texto-suave);
+  font-size: 0.82rem;
+  font-style: normal;
+  font-weight: 500;
+}
+
+#como-funciona .como-cabecalho {
+  margin-bottom: 36px;
+}
+
+#como-funciona .como-cabecalho .subtitulo {
+  max-width: 620px;
+}
+
+#como-funciona .etapas-grade {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  list-style: none;
+}
+
+#como-funciona .etapa {
+  height: 100%;
+}
+
+#como-funciona .etapa .numero {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--azul-pkz);
+}
+
+#como-funciona .etapa h3 {
+  margin-bottom: 10px;
+  color: var(--azul-marinho);
+  font-size: 1rem;
+}
+
+#como-funciona .etapa p {
+  color: var(--texto-suave);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 900px) {
+  #hero .hero-conteudo,
+  #sobre .sobre-conteudo {
+    gap: 32px;
+  }
+
+  #confianca .confianca-grade,
+  #como-funciona .etapas-grade {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #confianca .confianca-item {
+    padding: 16px 20px;
+    border-right: 0;
+  }
+
+  #confianca .confianca-item:nth-child(odd) {
+    padding-left: 0;
+  }
+
+  #confianca .confianca-item:nth-child(even) {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  #hero {
+    padding: 64px 0;
+  }
+
+  #hero .hero-conteudo,
+  #sobre .sobre-conteudo,
+  #confianca .confianca-grade,
+  #como-funciona .etapas-grade {
+    grid-template-columns: 1fr;
+  }
+
+  #hero .hero-conteudo,
+  #sobre .sobre-conteudo {
+    gap: 28px;
+  }
+
+  #hero .hero-foto {
+    min-height: 260px;
+  }
+
+  #hero .hero-acoes {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  #hero .hero-acoes .botao {
+    text-align: center;
+  }
+
+  #confianca .confianca-item,
+  #confianca .confianca-item:first-child,
+  #confianca .confianca-item:last-child {
+    padding: 16px 0;
+    border-right: 0;
+    border-bottom: 1px solid rgba(0, 0, 128, 0.16);
+  }
+
+  #confianca .confianca-item:last-child {
+    border-bottom: 0;
+  }
+
+  #sobre .sobre-foto {
+    min-height: 280px;
+  }
+}
