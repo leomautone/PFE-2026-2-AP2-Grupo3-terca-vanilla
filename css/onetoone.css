@@ -1,1 +1,115 @@
 /* One to One — Santiago */
+
+/* --- 1. Hero --- */
+#hero .botao {
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+
+#hero .subtitulo {
+  margin-bottom: 32px;
+}
+
+#hero .grade-3 {
+  margin-top: 40px;
+}
+
+/* --- 2. Sobre Nós --- */
+#sobre p {
+  margin-bottom: 16px; 
+}
+
+#sobre .pilula {
+  margin-right: 8px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+/* --- 3. Modalidades --- */
+#modalidades .card .foto {
+  margin-bottom: 20px;
+  min-height: 160px;
+}
+
+#modalidades .grade-4 {
+  margin-top: 40px;
+}
+
+/* --- 4. Diferenciais --- */
+#diferenciais .grade-4 {
+  margin-top: 40px;
+}
+
+#diferenciais .numero {
+  color: var(--branco);
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* --- 5. Avaliações --- */
+#avaliacoes .nota-geral {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+#avaliacoes .nota-geral .numero {
+  font-size: 3rem;
+  color: var(--azul-escuro);
+}
+
+#avaliacoes .nota-geral .estrelas {
+  font-size: 1.8rem; 
+}
+
+#avaliacoes .grade-3 {
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+#avaliacoes .card .estrelas {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+#avaliacoes .card strong {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  color: var(--azul-escuro);
+}
+
+/* --- 6. Unidades --- */
+#unidades h2 {
+  margin-bottom: 40px;
+}
+
+#unidades .card .foto {
+  margin-bottom: 24px;
+}
+
+#unidades .card .botao {
+  margin-top: 24px;
+}
+
+/* --- 7. Chamada final --- */
+#agendar .container {
+  text-align: center;
+}
+
+#agendar p {
+  color: rgba(255, 255, 255, 0.85);
+  margin: 16px auto 32px auto;
+  max-width: 600px;
+}
+
+/* --- Ajustes gerais de celular --- */
+@media (max-width: 800px) {
+  #hero .grade-2,
+  #sobre .grade-2 {
+    gap: 40px; 
+  }
+}
