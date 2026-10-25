@@ -31,17 +31,112 @@
   <main>
 
     <!-- Calendário — David -->
-    <section id="calendario">
+    <section id="calendario" class="agendamento-secao">
+      <div class="container">
+        <div class="agendamento-layout">
+          <section class="calendario-card" aria-labelledby="titulo-calendario">
+            <p class="etiqueta">Aula experimental</p>
+            <h1 id="titulo-calendario">Agende seu treino</h1>
+            <p class="calendario-intro">Clique em um dia disponível para escolher o horário.</p>
+
+            <div class="filtro-estudios" role="group" aria-label="Filtrar por estúdio">
+              <button class="filtro-botao ativo" type="button" data-filtro="Todos" aria-pressed="true">Todos</button>
+              <button class="filtro-botao" type="button" data-filtro="PKZ" aria-pressed="false">PKZ</button>
+              <button class="filtro-botao" type="button" data-filtro="One to One" aria-pressed="false">One to One</button>
+            </div>
+
+            <div class="calendario-navegacao">
+              <button id="mes-anterior" class="mes-controle" type="button" aria-label="Mês anterior">‹ <span>Setembro</span></button>
+              <h2 id="mes-atual" aria-live="polite"></h2>
+              <button id="proximo-mes" class="mes-controle" type="button" aria-label="Próximo mês"><span>Novembro</span> ›</button>
+            </div>
+
+            <div class="calendario-grade" aria-label="Dias da semana">
+              <span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span>
+            </div>
+            <div id="dias-calendario" class="calendario-grade dias-calendario" role="grid" aria-label="Calendário de disponibilidade"></div>
+            <p id="calendario-anuncio" class="sr-only" aria-live="polite"></p>
+          </section>
+
+          <aside id="lateral" class="agenda-lateral" aria-label="Informações do agendamento">
+            <section class="info-card">
+              <h2>Como funciona</h2>
+              <ol class="passos-agendamento">
+                <li><span>1</span>Escolha um dia com horários livres</li>
+                <li><span>2</span>Informe nome, horário e telefone</li>
+                <li><span>3</span>Receba a confirmação da equipe</li>
+              </ol>
+            </section>
+
+            <section class="info-card">
+              <h2>Legenda</h2>
+              <ul class="legenda-disponibilidade">
+                <li><span class="legenda-ponto ponto-livre"></span>Muitos horários livres</li>
+                <li><span class="legenda-ponto ponto-poucos"></span>Poucos horários</li>
+                <li><span class="legenda-ponto ponto-lotado"></span>Lotado</li>
+                <li><span class="legenda-ponto ponto-fechado"></span>Estúdio fechado</li>
+              </ul>
+            </section>
+
+            <section class="contato-card">
+              <h2>Prefere falar com alguém?</h2>
+              <p>Nossa recepção ajuda você a encontrar o melhor horário.</p>
+              <a class="botao botao-claro" href="https://wa.me/5521900000000" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
+            </section>
+          </aside>
+        </div>
+      </div>
     </section>
     <!-- fim Calendário -->
 
-    <!-- Lateral (como funciona, legenda e WhatsApp) — David -->
-    <section id="lateral">
-    </section>
-    <!-- fim Lateral (como funciona, legenda e WhatsApp) -->
-
     <!-- Modal do dia — David -->
-    <section id="modal">
+    <section id="modal" class="modal-overlay" aria-hidden="true" hidden>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="titulo-modal">
+        <button id="fechar-modal" class="modal-fechar" type="button" aria-label="Fechar">×</button>
+        <p class="etiqueta">Reserve sua aula</p>
+        <h2 id="titulo-modal"></h2>
+        <p class="modal-intro">Preencha os dados para reservar seu horário.</p>
+
+        <form id="form-agendamento" novalidate>
+          <div id="aviso-formulario" class="aviso-formulario" role="alert" hidden>
+            <strong>Faltam informações para confirmar</strong>
+            <span id="resumo-erros"></span>
+          </div>
+
+          <div class="campo-formulario" data-campo="nome">
+            <label for="nome-aluno">Nome do aluno</label>
+            <input id="nome-aluno" name="nome" type="text" autocomplete="name" placeholder="Seu nome completo" aria-describedby="erro-nome">
+            <span id="erro-nome" class="mensagem-erro"></span>
+          </div>
+
+          <div class="campo-formulario" data-campo="telefone">
+            <label for="telefone-aluno">Telefone (WhatsApp)</label>
+            <input id="telefone-aluno" name="telefone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(21) 9 0000-0000" aria-describedby="erro-telefone">
+            <span id="erro-telefone" class="mensagem-erro"></span>
+          </div>
+
+          <fieldset class="campo-formulario campo-opcoes" data-campo="estudio">
+            <legend>Estúdio</legend>
+            <div class="opcoes-estudio">
+              <button class="opcao-estudio" type="button" data-estudio="PKZ" aria-pressed="false">PKZ</button>
+              <button class="opcao-estudio" type="button" data-estudio="One to One" aria-pressed="false">One to One</button>
+            </div>
+            <span id="erro-estudio" class="mensagem-erro"></span>
+          </fieldset>
+
+          <fieldset class="campo-formulario campo-opcoes" data-campo="horario">
+            <legend>Horário</legend>
+            <div id="opcoes-horario" class="opcoes-horario"></div>
+            <span id="erro-horario" class="mensagem-erro"></span>
+          </fieldset>
+
+          <p class="aviso-whatsapp">Você recebe a confirmação no WhatsApp, e nossa equipe entra em contato se precisar de algo.</p>
+          <div class="acoes-modal">
+            <button id="cancelar-agendamento" class="botao botao-cancelar" type="button">Cancelar</button>
+            <button class="botao botao-escuro" type="submit">Confirmar agendamento</button>
+          </div>
+        </form>
+      </div>
     </section>
     <!-- fim Modal do dia -->
 
