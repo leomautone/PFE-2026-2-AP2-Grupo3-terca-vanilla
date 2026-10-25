@@ -1,1 +1,121 @@
-/* Página inicial — Pedro Henrique */
+/* index.css — Pedro Henrique (só a Home; não altera o base.css) */
+
+/* ---------- Hero ---------- */
+.hero {
+	/* 72px = altura do header sticky */
+	min-height: calc(100vh - 72px);
+	min-height: calc(100svh - 72px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+	padding: 4rem 0 5rem;
+}
+.hero-conteudo {
+	display: grid;
+	grid-template-columns: 1.1fr 0.9fr;
+	gap: 3rem;
+	align-items: center;
+}
+.hero h1 {
+	font-size: clamp(2.6rem, 7vw, 5.5rem);
+	margin: 0.5rem 0 1.25rem;
+}
+.hero .subtitulo { max-width: 34rem; }
+.hero-botoes {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin-top: 2rem;
+}
+.hero-foto { min-height: 24rem; height: 100%; }
+.hero-rolar {
+	position: absolute;
+	bottom: 1.5rem;
+	left: 0;
+	right: 0;
+	text-align: center;
+	font-size: 0.9rem;
+	opacity: 0.85;
+}
+
+/* ---------- Números ---------- */
+.numeros { padding: 3rem 0; }
+.numero-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 0.5rem;
+}
+.numero-item .numero { font-size: clamp(2.5rem, 5vw, 3.75rem); }
+.numero-legenda { font-size: 0.9rem; opacity: 0.85; max-width: 14rem; }
+
+/* ---------- Escolha seu caminho ---------- */
+.estudios-cabecalho { text-align: center; margin-bottom: 2.5rem; }
+.estudios-cabecalho .subtitulo { margin-left: auto; margin-right: auto; }
+
+.estudio-card {
+	position: relative;
+	overflow: hidden;
+	min-height: 30rem;
+	padding: 2.25rem;
+	border-radius: var(--raio);
+	color: var(--branco);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.estudio-pkz { background: var(--gradiente-pkz); }
+.estudio-onetoone { background: var(--gradiente-onetoone); }
+
+/* a etiqueta do base é azul; dentro do card (fundo azul) precisa ser clara */
+.estudio-card .etiqueta { color: rgba(255, 255, 255, 0.75); }
+.estudio-card h3 {
+	font-family: var(--fonte-titulo);
+	font-size: clamp(2.25rem, 5vw, 3.25rem);
+	font-weight: 700;
+	line-height: 1;
+	margin: 0.25rem 0 1rem;
+}
+.estudio-card ul {
+	margin: 1.25rem 0 2rem;
+	display: grid;
+	gap: 0.6rem;
+}
+.estudio-card li::before { content: "✓ "; font-weight: 700; }
+.estudio-card .botao { margin-top: auto; }
+
+/* Extra: frase que aparece no hover (só CSS) */
+.estudio-frase {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+	text-align: center;
+	font-family: var(--fonte-titulo);
+	font-size: clamp(1.75rem, 4vw, 2.5rem);
+	text-transform: uppercase;
+	background: rgba(0, 0, 80, 0.7);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.25s ease;
+}
+.estudio-card:hover .estudio-frase,
+.estudio-card:focus-within .estudio-frase { opacity: 1; }
+
+/* ---------- Celular ---------- */
+@media (max-width: 800px) {
+	.hero { padding: 3rem 0 5rem; }
+	.hero-conteudo { grid-template-columns: 1fr; }
+	.hero-foto { min-height: 14rem; }
+	/* números em 2 colunas (o base deixaria uma embaixo da outra) */
+	.numeros .grade-4 { grid-template-columns: repeat(2, 1fr); }
+	.estudio-card { min-height: 0; padding: 1.75rem; }
+	.estudio-card .botao { margin-top: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+	.estudio-frase { transition: none; }
+}
