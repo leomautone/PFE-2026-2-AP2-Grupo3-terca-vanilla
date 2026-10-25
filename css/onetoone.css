@@ -14,6 +14,44 @@
   margin-top: 40px;
 }
 
+#hero .hero-numeros {
+  gap: 24px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+#hero .hero-numeros .numero {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--branco);
+}
+
+/* ajustes finais: respiro entre título, textos e pílulas */
+#sobre h2,
+#modalidades h2,
+#diferenciais h2,
+#avaliacoes h2 {
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+#avaliacoes .card p {
+  margin-bottom: 16px;
+}
+
+#avaliacoes .nota-geral {
+  flex-wrap: wrap;
+}
+
+#avaliacoes .nota-geral p {
+  flex-basis: 100%;
+  color: var(--texto-suave);
+}
+
+#unidades .card p {
+  margin-top: 8px;
+}
+
 /* --- 2. Sobre Nós --- */
 #sobre p {
   margin-bottom: 16px; 
@@ -87,7 +125,12 @@
   margin-bottom: 40px;
 }
 
-#unidades .card .foto {
+#unidades .card .mapa {
+  display: block;
+  width: 100%;
+  height: 240px;
+  border: 0;
+  border-radius: var(--raio);
   margin-bottom: 24px;
 }
 
@@ -110,6 +153,15 @@
 @media (max-width: 800px) {
   #hero .grade-2,
   #sobre .grade-2 {
-    gap: 40px; 
+    gap: 40px;
+  }
+
+  #hero .hero-numeros {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  #diferenciais .grade-4 {
+    gap: 32px;
   }
 }
