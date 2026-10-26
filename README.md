@@ -30,7 +30,7 @@ As orientações detalhadas de cada um estão em [`tarefas/`](tarefas/).
 3. **Cada um trabalha na própria branch** (com o próprio nome) e abre um Pull Request para a `main`.
 4. **Só o Leonardo faz merge na `main`.**
 5. Commits pequenos, com mensagem curta em português dizendo o que foi feito.
-6. Dados e depoimentos são fictícios. **Nenhum espaço de imagem fica vazio** (regra do professor): enquanto as fotos do cliente não chegam, o site usa fotos de banco com licença livre (ver [Créditos das imagens](#créditos-das-imagens)).
+6. Dados e depoimentos são fictícios. **Nenhum espaço de imagem fica vazio** (regra do professor): enquanto as fotos do cliente não chegam, o site usa fotos de banco com licença livre.
 
 ## Estrutura
 
@@ -56,18 +56,3 @@ tarefas/            orientações de cada integrante
 - Azul-marinho e branco nas duas marcas, a partir do azul do logo da PKZ (`#000080`). A PKZ usa um azul mais vivo e o One to One um azul mais sóbrio.
 - Fontes: **Oswald** nos títulos e **Inter** nos textos.
 - Botões brancos com texto azul sobre fundo escuro, e azuis com texto branco sobre fundo claro.
-
-## Créditos das imagens
-
-Todas as fotos são de domínio público (**CC0**), encontradas pelo [Openverse](https://openverse.org/). Podem ser usadas sem atribuição, mas registramos a origem aqui. Elas serão trocadas pelas fotos do cliente quando ele enviar.
-
-| Arquivo | Origem |
-|---|---|
-| `img/index/hero-treino.jpg` | StockSnap |
-| `img/pkz/hero-atletas.jpg` | rawpixel ("Kids playing football tournament") |
-| `img/pkz/sobre-atletas.jpg` | Wikimedia Commons ("Kids playing football in Rwanda") |
-| `img/onetoone/hero-aluna.jpg`, `estudio.jpg`, `forca.jpg`, `performance.jpg`, `condicionamento.jpg`, `pos-lesao.jpg` | StockSnap |
-
-## Como rodar
-
-Não precisa instalar nada: é só abrir o `index.html` no navegador. No VS Code, a extensão Live Server atualiza a página sozinha a cada alteração.
