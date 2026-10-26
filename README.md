@@ -14,7 +14,7 @@ A PKZ é um estúdio de preparação física para crianças e adolescentes atlet
 | Integrante | Responsável por | Arquivos | Branch |
 |---|---|---|---|
 | Leonardo Camero (líder) | Base visual, header, footer, revisão e merge | `css/base.css` | — |
-| Pedro Henrique Godoy | Página inicial | `index.html`, `css/index.css` | `pedro` |
+| Pedro Henrique Godoy | Página inicial | `index.html`, `css/index.css` | `feature/atualiza-pagina-inicial` |
 | João Duarte | PKZ: hero, faixa de confiança, sobre nós, como funciona | `pkz.html` (blocos do João), `css/pkz-joao.css` | `joao` |
 | Kaue Reis | PKZ: prévia do relatório, cuidado e segurança, depoimentos, perguntas frequentes, chamada para agendar | `pkz.html` (blocos do Kaue), `css/pkz-kaue.css` | `kaue` |
 | Santiago Alejo | Página One to One | `onetoone.html`, `css/onetoone.css` | `santiago` |
@@ -30,7 +30,7 @@ As orientações detalhadas de cada um estão em [`tarefas/`](tarefas/).
 3. **Cada um trabalha na própria branch** (com o próprio nome) e abre um Pull Request para a `main`.
 4. **Só o Leonardo faz merge na `main`.**
 5. Commits pequenos, com mensagem curta em português dizendo o que foi feito.
-6. Dados, fotos e depoimentos são fictícios. As áreas "Foto / vídeo" marcam onde entram as imagens reais do cliente.
+6. Dados e depoimentos são fictícios. **Nenhum espaço de imagem fica vazio** (regra do professor): enquanto as fotos do cliente não chegam, o site usa fotos de banco com licença livre (ver [Créditos das imagens](#créditos-das-imagens)).
 
 ## Estrutura
 
@@ -47,7 +47,7 @@ js/
   base.js           menu do celular (compartilhado, só o Leonardo edita)
   agendamento.js    calendário, filtro e validação do modal
   confirmado.js     lê os dados do agendamento e monta o resumo
-img/                logo-pkz.png (logo oficial) e uma pasta por página
+img/                uma pasta por página com as fotos (o logo oficial entra como logo-pkz.png)
 tarefas/            orientações de cada integrante
 ```
 
@@ -56,6 +56,17 @@ tarefas/            orientações de cada integrante
 - Azul-marinho e branco nas duas marcas, a partir do azul do logo da PKZ (`#000080`). A PKZ usa um azul mais vivo e o One to One um azul mais sóbrio.
 - Fontes: **Oswald** nos títulos e **Inter** nos textos.
 - Botões brancos com texto azul sobre fundo escuro, e azuis com texto branco sobre fundo claro.
+
+## Créditos das imagens
+
+Todas as fotos são de domínio público (**CC0**), encontradas pelo [Openverse](https://openverse.org/). Podem ser usadas sem atribuição, mas registramos a origem aqui. Elas serão trocadas pelas fotos do cliente quando ele enviar.
+
+| Arquivo | Origem |
+|---|---|
+| `img/index/hero-treino.jpg` | StockSnap |
+| `img/pkz/hero-atletas.jpg` | rawpixel ("Kids playing football tournament") |
+| `img/pkz/sobre-atletas.jpg` | Wikimedia Commons ("Kids playing football in Rwanda") |
+| `img/onetoone/hero-aluna.jpg`, `estudio.jpg`, `forca.jpg`, `performance.jpg`, `condicionamento.jpg`, `pos-lesao.jpg` | StockSnap |
 
 ## Como rodar
 
