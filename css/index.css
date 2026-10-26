@@ -28,7 +28,7 @@
 	gap: 0.75rem;
 	margin-top: 2rem;
 }
-.hero-foto { min-height: 24rem; height: 100%; }
+.hero-foto { min-height: 24rem; height: 100%; object-position: 12% center; }
 .hero-rolar {
 	position: absolute;
 	bottom: 1.5rem;
