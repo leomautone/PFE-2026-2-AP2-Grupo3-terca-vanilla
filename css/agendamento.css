@@ -525,3 +525,9 @@ button.dia-calendario:hover:not(:disabled) {
     .acoes-modal { flex-direction: column-reverse; }
     .acoes-modal .botao { width: 100%; }
 }
+
+/* celular bem estreito (320px): "horários" não quebra no meio da palavra */
+@media (max-width: 360px) {
+    .calendario-card { padding: 20px 8px; }
+    .dia-status { font-size: 0.48rem; overflow-wrap: normal; }
+}
