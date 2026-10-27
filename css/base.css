@@ -313,10 +313,10 @@ img.foto {
   height: 72px;
 }
 
-/* por enquanto o logo é em texto ("PKZ | ONE TO ONE")
-   quando o oficial chegar, entra img/logo-pkz.png e as regras do img já estão prontas */
+/* logo oficial da PKZ + "ONE TO ONE" em texto (o One to One ainda não tem logo próprio) */
 .logo {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   font-family: var(--fonte-titulo);
   font-size: 1.3rem;
   font-weight: 700;
@@ -389,7 +389,7 @@ img.foto {
 
 .footer .logo {
   color: var(--branco);
-  display: inline-block;
+  display: inline-flex;
   margin-bottom: 8px;
 }
 
