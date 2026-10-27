@@ -116,6 +116,11 @@
 	.estudio-card { min-height: 0; padding: 1.75rem; }
 	.estudio-card .botao { margin-top: 0; }
 }
+/* botões do hero um embaixo do outro, com a mesma largura (igual à página da PKZ) */
+@media (max-width: 640px) {
+	.hero-botoes { flex-direction: column; }
+	.hero-botoes .botao { text-align: center; }
+}
 @media (prefers-reduced-motion: reduce) {
 	.estudio-frase { transition: none; }
 }

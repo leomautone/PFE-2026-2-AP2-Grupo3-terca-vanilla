@@ -178,3 +178,18 @@
     gap: 32px;
   }
 }
+
+/* botões do hero um embaixo do outro, com a mesma largura (igual à página da PKZ) */
+@media (max-width: 640px) {
+  #hero .hero-acoes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  #hero .hero-acoes .botao {
+    margin: 0;
+    text-align: center;
+  }
+}
