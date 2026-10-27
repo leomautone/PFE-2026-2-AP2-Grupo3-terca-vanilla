@@ -22,6 +22,22 @@
     let horarioSelecionado = '';
     let elementoAnterior = null;
 
+    // Revisão de acessibilidade: o fundo deixa de receber foco com o modal aberto.
+    // O estado anterior de cada região é preservado para o fechamento.
+    const regioesFundo = Array.from(document.querySelectorAll('body > header, body > footer, #calendario'));
+    const estadosInertes = new Map();
+
+    function obterControlesModal() {
+        return Array.from(modal.querySelectorAll('a[href], button, input, select, textarea, [tabindex]'))
+            .filter((controle) => !controle.disabled && controle.tabIndex >= 0
+                && !controle.closest('[hidden], [inert]') && controle.getClientRects().length > 0);
+    }
+
+    function focarInicioModal() {
+        const primeiro = obterControlesModal()[0] || modal.querySelector('.modal-card');
+        primeiro.focus();
+    }
+
     const normalizarData = (data) => new Date(data.getFullYear(), data.getMonth(), data.getDate());
     const dataHoje = normalizarData(new Date());
 
@@ -191,6 +207,10 @@
         modal.hidden = false;
         modal.setAttribute('aria-hidden', 'false');
         document.body.classList.add('modal-aberto');
+        regioesFundo.forEach((regiao) => {
+            estadosInertes.set(regiao, regiao.inert);
+            regiao.inert = true;
+        });
         document.querySelector('#fechar-modal').focus();
     }
 
@@ -198,6 +218,8 @@
         modal.hidden = true;
         modal.setAttribute('aria-hidden', 'true');
         document.body.classList.remove('modal-aberto');
+        estadosInertes.forEach((estado, regiao) => { regiao.inert = estado; });
+        estadosInertes.clear();
         if (elementoAnterior) elementoAnterior.focus();
     }
 
@@ -319,7 +341,34 @@
         if (evento.target === modal) fecharModal();
     });
     document.addEventListener('keydown', (evento) => {
-        if (evento.key === 'Escape' && !modal.hidden) fecharModal();
+        if (modal.hidden) return;
+        if (evento.key === 'Escape') {
+            evento.preventDefault();
+            fecharModal();
+            return;
+        }
+
+        // Tab e Shift+Tab circulam apenas pelos controles visíveis e habilitados.
+        if (evento.key !== 'Tab') return;
+        const controles = obterControlesModal();
+        const primeiro = controles[0];
+        const ultimo = controles[controles.length - 1];
+        const foco = document.activeElement;
+        if (!primeiro || !modal.contains(foco)) {
+            evento.preventDefault();
+            focarInicioModal();
+        } else if (evento.shiftKey && (foco === primeiro || !controles.includes(foco))) {
+            evento.preventDefault();
+            ultimo.focus();
+        } else if (!evento.shiftKey && (foco === ultimo || !controles.includes(foco))) {
+            evento.preventDefault();
+            primeiro.focus();
+        }
+    });
+
+    // Também protege o foco de movimentações programáticas para fora da janela.
+    document.addEventListener('focusin', (evento) => {
+        if (!modal.hidden && !modal.contains(evento.target)) focarInicioModal();
     });
 
     formulario.addEventListener('submit', (evento) => {
