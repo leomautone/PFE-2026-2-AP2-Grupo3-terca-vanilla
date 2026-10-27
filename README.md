@@ -5,7 +5,8 @@ Site institucional da **PKZ / One to One** feito em **HTML, CSS e JavaScript pur
 A PKZ é um estúdio de preparação física para crianças e adolescentes atletas. O One to One é um estúdio de personal training para todas as idades. O site apresenta as duas marcas e tem um agendamento de aula experimental. Aqui no vanilla, o agendamento é **só visual**: nada é enviado para servidor.
 
 - **Site publicado (GitHub Pages):** https://leomautone.github.io/PFE-2026-2-AP2-Grupo3-terca-vanilla/
-- **Documentação do projeto** (entrevista, brainstorm, 5W2H, documento de visão, protótipo e Scrum): [repositório React](https://github.com/leomautone/PFE-2026-2-AP2-Grupo3-terca-react), pasta `docs/`
+- **Scrum (backlog e andamento das sprints):** [docs/scrum/07-backlog-scrum.md](docs/scrum/07-backlog-scrum.md)
+- **Documentação do projeto** (entrevista, brainstorm, 5W2H, documento de visão e protótipo): [repositório React](https://github.com/leomautone/PFE-2026-2-AP2-Grupo3-terca-react), pasta `docs/`
 - **Telas do protótipo:** [docs/prototipo/telas](https://github.com/leomautone/PFE-2026-2-AP2-Grupo3-terca-react/tree/main/docs/prototipo/telas)
 - **Protótipo no Figma:** https://www.figma.com/design/CQmuVXYjxTUkLDg5CzWbk0
 
@@ -20,8 +21,6 @@ A PKZ é um estúdio de preparação física para crianças e adolescentes atlet
 | Santiago Alejo | Página One to One | `onetoone.html`, `css/onetoone.css` | `santiago` |
 | David Madureira | Agendamento: calendário e modal | `agendamento.html`, `css/agendamento.css`, `js/agendamento.js` | `david` |
 | Arthur Aires | Agendamento confirmado | `confirmado.html`, `css/confirmado.css`, `js/confirmado.js` | `arthur` |
-
-As orientações detalhadas de cada um estão em [`tarefas/`](tarefas/).
 
 ## Regras do grupo
 
@@ -40,6 +39,7 @@ pkz.html            página da PKZ (voltada aos pais de jovens atletas)
 onetoone.html       página do One to One (personal training)
 agendamento.html    calendário e modal de agendamento
 confirmado.html     resumo do agendamento
+docs/scrum/         backlog e andamento das sprints (Scrum)
 css/
   base.css          cores, fontes, reset, header, footer e botões (compartilhado)
   index.css, pkz-joao.css, pkz-kaue.css, onetoone.css, agendamento.css, confirmado.css
@@ -47,8 +47,7 @@ js/
   base.js           menu do celular (compartilhado, só o Leonardo edita)
   agendamento.js    calendário, filtro e validação do modal
   confirmado.js     lê os dados do agendamento e monta o resumo
-img/                uma pasta por página com as fotos (o logo oficial entra como logo-pkz.png)
-tarefas/            orientações de cada integrante
+img/                logo oficial (logo-pkz.png) e uma pasta por página com as fotos
 ```
 
 ## Identidade visual
