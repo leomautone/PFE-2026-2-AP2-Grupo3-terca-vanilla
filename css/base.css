@@ -498,5 +498,27 @@ img.foto {
   .header .botao {
     font-size: 0.8rem;
     padding: 8px 12px;
+    white-space: nowrap;
+  }
+}
+
+/* celular bem estreito (320px): logo menor pra caber logo + botão + ☰ */
+@media (max-width: 360px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .header-conteudo {
+    gap: 8px;
+  }
+
+  .header .logo img {
+    height: 26px;
+  }
+
+  .header .logo span {
+    font-size: 0.9rem;
+    margin-left: 6px;
+    padding-left: 8px;
   }
 }
