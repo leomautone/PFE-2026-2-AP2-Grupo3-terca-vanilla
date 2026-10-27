@@ -1,7 +1,8 @@
 /* Confirmado — Arthur */
 
 #confirmacao {
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 72px);
+  min-height: calc(100svh - 72px);
   display: flex;
   align-items: center;
 }
@@ -28,7 +29,10 @@
 }
 
 #confirmacao h1 {
-  font-size: clamp(2rem, 5vw, 2.6rem);
+  font-family: var(--fonte-texto);
+  font-size: clamp(1.5rem, 4vw, 1.8rem);
+  line-height: 1.25;
+  text-transform: none;
   color: var(--azul-escuro);
 }
 
@@ -39,7 +43,7 @@
 
 #confirmacao .confirmacao-texto strong {
   color: var(--texto);
-  white-space: nowrap;
+  overflow-wrap: anywhere;
 }
 
 #confirmacao .confirmacao-resumo {
@@ -64,11 +68,15 @@
 
 #confirmacao .confirmacao-resumo dt {
   color: var(--texto-suave);
+  flex-shrink: 0;
 }
 
 #confirmacao .confirmacao-resumo dd {
+  min-width: 0;
   font-weight: 700;
   text-align: right;
+  overflow-wrap: anywhere;
+  font-variant-numeric: tabular-nums;
 }
 
 #confirmacao .confirmacao-aviso {
@@ -84,9 +92,28 @@
   gap: 12px;
 }
 
+#confirmacao .confirmacao-botoes .botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  white-space: nowrap;
+}
+
 #confirmacao .botao-whatsapp {
-  background: var(--verde);
-  color: var(--branco);
+  background: var(--branco);
+  color: var(--azul-marinho);
+  border-color: var(--borda);
+}
+
+#confirmacao .botao-whatsapp:hover {
+  background: var(--fundo-claro);
+  border-color: var(--azul-marinho);
+}
+
+#confirmacao .botao:focus-visible {
+  outline: 3px solid var(--azul-pkz);
+  outline-offset: 4px;
 }
 
 @media (max-width: 560px) {
@@ -98,8 +125,20 @@
     padding: 4px 16px;
   }
 
+  #confirmacao .confirmacao-resumo div {
+    gap: 12px;
+    font-size: 0.85rem;
+  }
+
   #confirmacao .confirmacao-botoes .botao {
     width: 100%;
     text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #confirmacao .botao {
+    transition: none;
+    transform: none;
   }
 }
