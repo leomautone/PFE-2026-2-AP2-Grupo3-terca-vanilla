@@ -86,9 +86,21 @@
 }
 
 /* --- 5. Avaliações --- */
+/* Revisão do protótipo: centraliza apenas o cabeçalho e a nota, preservando os cards. */
+#avaliacoes > .container > .etiqueta {
+  display: block;
+  text-align: center;
+}
+
+#avaliacoes h2 {
+  text-align: center;
+}
+
 #avaliacoes .nota-geral {
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 16px;
   margin-top: 10px;
   margin-bottom: 8px;
