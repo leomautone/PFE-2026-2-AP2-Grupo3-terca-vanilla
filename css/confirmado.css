@@ -29,10 +29,7 @@
 }
 
 #confirmacao h1 {
-  font-family: var(--fonte-texto);
-  font-size: clamp(1.5rem, 4vw, 1.8rem);
-  line-height: 1.25;
-  text-transform: none;
+  font-size: clamp(2rem, 5vw, 2.6rem);
   color: var(--azul-escuro);
 }
 
@@ -43,7 +40,7 @@
 
 #confirmacao .confirmacao-texto strong {
   color: var(--texto);
-  overflow-wrap: anywhere;
+  white-space: nowrap;
 }
 
 #confirmacao .confirmacao-resumo {
