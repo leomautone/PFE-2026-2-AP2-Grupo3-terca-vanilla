@@ -243,7 +243,10 @@
         }
 
         avisoFormulario.hidden = erros.length === 0;
-        resumoErros.textContent = erros.length ? `${erros.join(', ')}.` : '';
+        const listaErros = erros.length > 1
+            ? `${erros.slice(0, -1).join(', ')} e ${erros[erros.length - 1]}`
+            : erros.join('');
+        resumoErros.textContent = listaErros ? `${listaErros.charAt(0).toUpperCase()}${listaErros.slice(1)}.` : '';
         return erros.length === 0;
     }
 
